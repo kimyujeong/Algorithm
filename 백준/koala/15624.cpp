@@ -5,7 +5,7 @@ using namespace std;
 
 typedef long long ll;
 ll n;
-ll dp[1000000];
+ll dp[1000001];
 
 ll fib(ll x) {
 	if (x == 0) return 0;

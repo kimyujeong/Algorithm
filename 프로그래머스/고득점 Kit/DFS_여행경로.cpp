@@ -1,0 +1,30 @@
+#include <string>
+#include <vector>
+#include <algorithm>
+
+using namespace std;
+
+bool DFS(string Cur, vector<vector<string>> Ticket, vector<string> &answer, vector<bool> &Visit, int Use_Ticket)
+{
+    answer.push_back(Cur);
+    if(Use_Ticket==Ticket.size()) return true;
+    
+    for(int i=0;i<Ticket.size();i++){
+        if(Ticket[i][0]==Cur && !Visit[i]){
+            Visit[i]=true;
+            bool T=DFS(Ticket[i][1], Ticket, answer, Visit, Use_Ticket+1);
+            if(T) return true;
+            Visit[i]=false;
+        }
+    }
+    answer.pop_back();
+    return false;
+}
+
+vector<string> solution(vector<vector<string>> tickets) {
+    vector<string> answer;
+    vector<bool> visited(tickets.size(),false);
+    sort(tickets.begin(),tickets.end());
+    DFS("ICN",tickets,answer,visited,0);
+    return answer;
+}

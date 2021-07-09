@@ -608,7 +608,7 @@ i번째 물건을 가방에 넣는 경우: dp[i][j] = dp[i-1][j-w[i]] + v[i]
 -	완전탐색
 -	#include <algorithm>
 -	Int max = *max_element(a.begin(),a.end());
-```
+
 
 ## 프로그래머스 고득점 Kit – 소수찾기
 -	완전탐색, 백트래킹

@@ -45,6 +45,20 @@
 ## String – str.substr(a,b)
 -	Str의 a번째부터 b개만큼
 
+## String - getline(cin,str)
+* 공백까지 입력받음
+* #include < string >
+	
+## String - 소문자로 변경(transform/tolower)
+``` c++
+// transform : #include <algorithm>
+// tolower : #include <ctype.h>
+
+transform(str.begin(), str.end(), str.begin(), (int(*)(int))tolower);
+
+// tolower 함수가 ambiguous하기 때문에 명확하게 인자를 캐스팅해야 함
+```
+
 ## DFS 
 - 그래프에서 아래로 내려갈 수 있을 때까지 갔다가 막히면 되돌아와서 다시 내려가는 탐색 방법
 ## BFS 

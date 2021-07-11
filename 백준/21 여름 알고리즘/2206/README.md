@@ -33,12 +33,12 @@ if (Map[next_y][next_x] == 0 && !Visited[next_y][next_x][block]) { // 지나갈 
 
 ``` c++
 else if (Map[next_y][next_x] == 1 && !Visited[next_y][next_x][block]) { // 막혀있는지
-		if (!block) { // block == 0 이라면 -> 아직 부순 적이 없다면
-				Visited[next_y][next_x][1] = Visited[node_y][node_x][block] + 1;
-        // Visited[][][1]에 저장
+	if (!block) { // block == 0 이라면 -> 아직 부순 적이 없다면
+		Visited[next_y][next_x][1] = Visited[node_y][node_x][block] + 1;
+        	// Visited[][][1]에 저장
      
-				q.push({ { next_y,next_x },1 });
-        // q.push({{ , },1})
-		}
+		q.push({ { next_y,next_x },1 });
+        	// q.push({{ , },1})
+	}
 }
 ```

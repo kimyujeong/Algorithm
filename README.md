@@ -100,6 +100,8 @@ else dp[i][j] = max(dp[i][j-1], dp[i-1][j]);
 int tree_height = (int)ceil(log2(n)); // #include <cmath>
 int tree_size = (1 << (tree_height + 1));
 
+// 생각 안난다면 
+
 ```
 
 ```c++

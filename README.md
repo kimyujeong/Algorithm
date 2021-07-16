@@ -841,4 +841,4 @@ else if (Map[next_y][next_x] == 1 && !Visited[next_y][next_x][block]) { // 막�
 ## 백준 2357 - 최솟값과 최댓값
 * 세그먼트 트리
 * 입출력 때문에 시간초과
-	* cin/cout → 
+	* cin/cout → scanf/printf (#include <stdio.h>)

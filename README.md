@@ -90,7 +90,30 @@ else dp[i][j] = max(dp[i][j-1], dp[i-1][j]);
 
 ```
     
+## Segment Tree
 
+* 구간 합을 구할 때 사용하는 알고리즘
+
+```c++
+
+// Tree Size
+int tree_height = (int)ceil(log2(n)); // #include <cmath>
+int tree_size = (1 << (tree_height + 1));
+
+```
+
+```c++
+
+// 세그먼트 트리 생성
+long long make_segmentTree(int node, int start, int end)
+
+// 세그먼트 트리 연산
+long long mul(int node, int start, int end, int left, int right)
+
+// 세그먼트 트리 값 변경
+long long update(int node, int start, int end, int index, long long num)
+
+```
 
 
  

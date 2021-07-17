@@ -90,7 +90,32 @@ else dp[i][j] = max(dp[i][j-1], dp[i-1][j]);
 
 ```
     
+## Segment Tree
 
+* 구간 합을 구할 때 사용하는 알고리즘
+
+```c++
+
+// Tree Size
+int tree_height = (int)ceil(log2(n)); // #include <cmath>
+int tree_size = (1 << (tree_height + 1));
+
+// 생각 안난다면 4*n
+
+```
+
+```c++
+
+// 세그먼트 트리 생성
+long long make_segmentTree(int node, int start, int end)
+
+// 세그먼트 트리 연산
+long long mul(int node, int start, int end, int left, int right)
+
+// 세그먼트 트리 값 변경
+long long update(int node, int start, int end, int index, long long num)
+
+```
 
 
  
@@ -812,3 +837,8 @@ else if (Map[next_y][next_x] == 1 && !Visited[next_y][next_x][block]) { // 막�
 * 다익스트라
 * 첫번째 노드부터 마지막 노드까지를 시작점으로 돌면서 다익스트라 순회
    * 그 노드에서 갈 수 있는 노드에 있는 아이템 갯수를 더해주고 return
+	
+## 백준 2357 - 최솟값과 최댓값
+* 세그먼트 트리
+* 입출력 때문에 시간초과
+	* cin/cout → scanf/printf (#include <stdio.h>)

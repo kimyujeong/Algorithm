@@ -117,6 +117,10 @@ long long update(int node, int start, int end, int index, long long num)
 
 ```
 
+## int / long long
+* int : -2,147,483,648 ~ 2,147,483,647 / –2^31 ~ 2^31-1
+* long long : -9,223,372,036,854,775,808 ~ 9,223,372,036,854,775,807 / -2^63 ~ 2^63-1
+
 
  
 # 틀린 문제

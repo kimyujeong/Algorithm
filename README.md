@@ -121,6 +121,55 @@ long long update(int node, int start, int end, int index, long long num)
 * int : -2,147,483,648 ~ 2,147,483,647 / –2^31 ~ 2^31-1
 * long long : -9,223,372,036,854,775,808 ~ 9,223,372,036,854,775,807 / -2^63 ~ 2^63-1
 
+## memset
+
+```c++
+
+// 헤더
+#include <cstring>
+
+// 사용
+memset(배열,false,sizeof(배열))
+
+```
+
+## 모두 아래로 이동하는 함수
+
+```c++
+
+for (int j = 0; j < N; j++) {
+	int bottom = N - 1;
+	for (int i = N - 1; i >= 0; i--) {
+		if (Map[i][j] == -2) continue;
+		else if (Map[i][j] == -1) bottom = i - 1;
+		else {
+			int temp = Map[i][j];
+			Map[i][j] = -2;
+			Map[bottom--][j] = temp;
+		}
+	}
+}
+
+```
+
+## 90도 반시계 회전
+
+```c++
+
+int tmp[20][20];
+for (int i = 0; i < N; i++) {
+	for (int j = 0; j < N; j++) {
+		tmp[N-1-j][i] = Map[i][j];
+	}
+}
+for (int i = 0; i < N; i++) {
+	for (int j = 0; j < N; j++) {
+		Map[i][j] = tmp[i][j];
+	}
+}
+
+```
+
 
  
 # 틀린 문제
